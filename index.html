@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Haven Residences: An exclusive luxury real estate boutique showcase of quiet luxury living. Explore interactive floorplans, premium views, and high-end residential amenities.">
+    <title>The Haven Residences | Quiet Luxury Living</title>
+    
+    <!-- Google Fonts: Cormorant Garamond (Serif Headings) & Inter (Sans-serif UI/Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon: Signature Champagne Gold Star Seal (Enlarged for browser tab visibility) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><path d=%22M16 1 L19 13 L31 16 L19 19 L16 31 L13 19 L1 16 L13 13 Z%22 fill=%22%23C5A059%22/></svg>">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-serif">THE HAVEN</span>
+                <span class="logo-subtitle">RESIDENCES</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#narrative" class="nav-item">Philosophy</a>
+                <a href="#selector" class="nav-item">Floorplans &amp; Views</a>
+                <a href="#amenities" class="nav-item">Amenities</a>
+                <a href="#neighborhood" class="nav-item">Neighborhood</a>
+            </nav>
+            <a href="#inquiry" class="btn-gold-outline header-cta">Private Viewing</a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-wrapper">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-subtitle">ARCHITECTURAL POETRY, CARVED IN STONE</h2>
+            <h1 class="hero-title">The Haven</h1>
+            <div class="scroll-indicator">
+                <span class="scroll-text">Explore the Haven</span>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Narrative (Philosophy) Section -->
+    <section class="narrative-section" id="narrative">
+        <div class="container">
+            <div class="narrative-grid">
+                <div class="narrative-text reveal-on-scroll">
+                    <h3 class="section-label">Philosophy</h3>
+                    <h2 class="section-title">An Ode to Quiet Luxury</h2>
+                    <p class="narrative-paragraph">
+                        Carved out of raw Italian travertine stone, warm bronze elements, and soaring triple-height glass arches, The Haven Residences stands as a testament to understated elegance. We believe architecture should not scream for attention, but rather blend seamlessly with light, water, and shadow.
+                    </p>
+                    <p class="narrative-paragraph">
+                        Every material is sourced responsibly—from the geothermal climate infrastructure embedded deep within the bedrock to the centuries-old reclaimed oak panels gracing the grand reception. This is not merely a residence; it is an enduring sanctuary for generations.
+                    </p>
+                    <div class="narrative-details">
+                        <div class="detail-item">
+                            <span class="detail-number">12</span>
+                            <span class="detail-label">Exclusive Suites</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-number">100%</span>
+                            <span class="detail-label">Geothermal Powered</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-number">24/7</span>
+                            <span class="detail-label">White-Glove Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-image-wrapper reveal-on-scroll delay-1">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Exquisite Travertine Detailing at The Haven" class="narrative-img">
+                    <div class="image-accent-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Interactive Console: Floorplan & View Selector -->
+    <section class="selector-section" id="selector">
+        <div class="container">
+            <div class="selector-header reveal-on-scroll">
+                <h3 class="section-label">Interactive Experience</h3>
+                <h2 class="section-title">The Floorplan &amp; View Selector</h2>
+                <p class="section-subtitle">Dynamically configure your future residence. Experience the exact view and layout in real time.</p>
+            </div>
+            
+            <div class="console-grid reveal-on-scroll">
+                <!-- Controls & Specs Left Panel -->
+                <div class="console-controls-panel">
+                    <div class="panel-section">
+                        <h4 class="panel-title">1. Select Unit Type</h4>
+                        <div class="control-group-buttons" id="unit-selector">
+                            <button class="btn-console active" data-unit="penthouse">Penthouse</button>
+                            <button class="btn-console" data-unit="suite">2-Bedroom Suite</button>
+                            <button class="btn-console" data-unit="loft">1-Bedroom Loft</button>
+                        </div>
+                    </div>
+                    
+                    <div class="panel-section">
+                        <h4 class="panel-title">2. Select Floor Level</h4>
+                        <div class="control-group-buttons" id="floor-selector">
+                            <button class="btn-console" data-floor="lower">Lower Ground</button>
+                            <button class="btn-console active" data-floor="mid">Mid-rise Canopy</button>
+                            <button class="btn-console" data-floor="upper">Upper Levels</button>
+                        </div>
+                    </div>
+
+                    <div class="panel-section specs-section">
+                        <h4 class="panel-title">3. Specifications</h4>
+                        <table class="specs-table" id="specs-table">
+                            <tbody>
+                                <tr>
+                                    <td>Suite Number</td>
+                                    <td id="spec-suite" class="spec-value">—</td>
+                                </tr>
+                                <tr>
+                                    <td>Square Footage</td>
+                                    <td id="spec-sqft" class="spec-value">—</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceiling Height</td>
+                                    <td id="spec-ceiling" class="spec-value">—</td>
+                                </tr>
+                                <tr>
+                                    <td>Balconies/Terrace</td>
+                                    <td id="spec-balcony" class="spec-value">—</td>
+                                </tr>
+                                <tr>
+                                    <td>Orientation</td>
+                                    <td id="spec-orientation" class="spec-value">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Interactive Blueprint Viewport -->
+                <div class="console-blueprint-panel">
+                    <h4 class="panel-title border-bottom">Architectural Blueprint</h4>
+                    <div class="blueprint-container">
+                        <!-- Blueprint grid lines -->
+                        <div class="blueprint-grid-overlay"></div>
+                        <div class="blueprint-svg-wrapper" id="blueprint-wrapper">
+                            <!-- SVG Blueprints will be dynamically inserted here via JS -->
+                        </div>
+                    </div>
+                    <div class="blueprint-legend">
+                        <span><span class="legend-dot masonry"></span>Load Bearing Travertine</span>
+                        <span><span class="legend-dot bronze"></span>Bronze Metal Framings</span>
+                        <span><span class="legend-dot dimension"></span>Dimensions in Feet</span>
+                    </div>
+                </div>
+
+                <!-- Window View Render & Inquiry Panel -->
+                <div class="console-view-panel">
+                    <h4 class="panel-title">Window &amp; Balcony View</h4>
+                    <div class="window-frame">
+                        <div class="window-render-img" id="window-view-bg" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="window-overlay"></div>
+                        <div class="window-border-left"></div>
+                        <div class="window-border-right"></div>
+                        <div class="window-border-top"></div>
+                        <div class="window-label" id="window-label">Mid-rise Canopy View</div>
+                    </div>
+                    
+                    <div class="inquiry-trigger-container">
+                        <p class="inquiry-intro-text">Ready to experience this view in person?</p>
+                        <button class="btn-gold-full" id="reserve-suite-btn">Reserve Suite 1401</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Carousel Section -->
+    <section class="amenities-section" id="amenities">
+        <div class="container">
+            <div class="amenities-header reveal-on-scroll">
+                <h3 class="section-label">The Lifestyle</h3>
+                <h2 class="section-title">Bespoke Amenities</h2>
+                <p class="section-subtitle">Exquisite spaces crafted exclusively for the twelve residents of The Haven.</p>
+            </div>
+        </div>
+
+        <div class="carousel-container reveal-on-scroll">
+            <div class="carousel-track-wrapper">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Slide 1: Wine Cellar -->
+                    <div class="carousel-slide active" data-index="0">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-num">01 / 04</span>
+                            <h3 class="slide-title">Subterranean Wine Cellar</h3>
+                            <p class="slide-desc">Private temperature-controlled travertine vaults for aging your finest vintages, complete with an intimate tasting table carved from single-block basalt stone.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2: Rooftop Pool -->
+                    <div class="carousel-slide" data-index="1">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-num">02 / 04</span>
+                            <h3 class="slide-title">Rooftop Infinity Pool</h3>
+                            <p class="slide-desc">A sky-high heated oasis where the water blends seamlessly with the twilight skyline. Featuring heated limestone deck loungers and full towel and beverage service.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3: Wellness Spa -->
+                    <div class="carousel-slide" data-index="2">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-num">03 / 04</span>
+                            <h3 class="slide-title">Wellness Spa &amp; Hammam</h3>
+                            <p class="slide-desc">A private thermal spa sanctuary incorporating modern cold-plunge pools, custom Finnish cedar saunas, and steam rooms lined with light marble.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4: 24/7 Concierge -->
+                    <div class="carousel-slide" data-index="3">
+                        <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80');"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content">
+                            <span class="slide-num">04 / 04</span>
+                            <h3 class="slide-title">White-Glove 24/7 Concierge</h3>
+                            <p class="slide-desc">From securing hard-to-get Michelin star reservations to overseeing absolute privacy and customized package management, our resident service is absolute.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="carousel-navigation">
+                <div class="carousel-indicators" id="carousel-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                    <button class="indicator" data-slide="3"></button>
+                </div>
+                <div class="carousel-arrows">
+                    <button class="arrow-btn" id="prev-btn" aria-label="Previous Slide">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 19l-7-7 7-7"/></svg>
+                    </button>
+                    <button class="arrow-btn" id="next-btn" aria-label="Next Slide">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhood Map Section -->
+    <section class="neighborhood-section" id="neighborhood">
+        <div class="container">
+            <div class="neighborhood-grid">
+                <div class="neighborhood-map-container reveal-on-scroll">
+                    <!-- Beautiful Custom SVG Map -->
+                    <div class="map-wrapper" id="interactive-map">
+                        <svg viewBox="0 0 800 500" width="100%" height="100%" class="custom-styled-svg-map">
+                            <!-- Definitions for map styling -->
+                            <defs>
+                                <radialGradient id="hotspot-glow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#C5A059" stop-opacity="0.6"/>
+                                    <stop offset="100%" stop-color="#C5A059" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                            
+                            <!-- Base Map Ground (Sand Beige) -->
+                            <rect width="800" height="500" rx="6" fill="#F4F0EA"/>
+                            
+                            <!-- River (Soft Blue/Charcoal) -->
+                            <path d="M -10,380 Q 200,340 380,410 T 810,390 L 810,510 L -10,510 Z" fill="#E2DBD1" stroke="#D3C9BD" stroke-width="1.5"/>
+                            
+                            <!-- Central Park Area (Soft Green) -->
+                            <rect x="520" y="30" width="230" height="180" rx="8" fill="#E4EBE5" stroke="#D5E0D7" stroke-width="1.5"/>
+                            <text x="635" y="125" fill="#6E7370" font-family="Inter" font-size="11" letter-spacing="3" text-anchor="middle" font-weight="500">BOTANICAL GARDENS</text>
+                            
+                            <!-- Roads Grid -->
+                            <path d="M 0,100 L 800,100 M 0,220 L 800,220 M 0,330 L 800,330 M 150,0 L 150,500 M 340,0 L 340,500 M 520,0 L 520,500" stroke="#E8E2D7" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M 0,100 L 800,100 M 0,220 L 800,220 M 0,330 L 800,330 M 150,0 L 150,500 M 340,0 L 340,500 M 520,0 L 520,500" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+                            
+                            <!-- Secondary Diagonal Avenue -->
+                            <line x1="0" y1="50" x2="800" y2="450" stroke="#FFFFFF" stroke-width="5"/>
+                            <line x1="0" y1="50" x2="800" y2="450" stroke="#E8E2D7" stroke-width="1" stroke-dasharray="4,4"/>
+                            
+                            <!-- The Haven Residences Landmark (Epicenter) -->
+                            <g class="map-epicenter" transform="translate(340, 220)">
+                                <circle r="22" fill="#2F3D33" fill-opacity="0.12"/>
+                                <circle r="12" fill="#2F3D33" stroke="#C5A059" stroke-width="2"/>
+                                <circle r="4" fill="#C5A059"/>
+                                <text y="-28" fill="#1D201F" font-family="Cormorant Garamond" font-size="14" font-weight="600" letter-spacing="1" text-anchor="middle">THE HAVEN</text>
+                            </g>
+                            
+                            <!-- Hotspot 1: Michelin Restaurant -->
+                            <g class="map-hotspot" data-spot="michelin" transform="translate(180, 130)">
+                                <circle class="pulse" r="16" fill="url(#hotspot-glow)"/>
+                                <circle r="7" fill="#C5A059" stroke="#FFFFFF" stroke-width="1.5"/>
+                            </g>
+                            
+                            <!-- Hotspot 2: Contemporary Gallery -->
+                            <g class="map-hotspot" data-spot="gallery" transform="translate(560, 290)">
+                                <circle class="pulse" r="16" fill="url(#hotspot-glow)"/>
+                                <circle r="7" fill="#C5A059" stroke="#FFFFFF" stroke-width="1.5"/>
+                            </g>
+                            
+                            <!-- Hotspot 3: Private Wellness Club -->
+                            <g class="map-hotspot" data-spot="wellness" transform="translate(240, 310)">
+                                <circle class="pulse" r="16" fill="url(#hotspot-glow)"/>
+                                <circle r="7" fill="#C5A059" stroke="#FFFFFF" stroke-width="1.5"/>
+                            </g>
+                            
+                            <!-- Hotspot 4: Botanical Gardens Gateway -->
+                            <g class="map-hotspot" data-spot="gardens" transform="translate(600, 160)">
+                                <circle class="pulse" r="16" fill="url(#hotspot-glow)"/>
+                                <circle r="7" fill="#C5A059" stroke="#FFFFFF" stroke-width="1.5"/>
+                            </g>
+                        </svg>
+                        
+                        <!-- Map Dynamic Card Overlay -->
+                        <div class="map-card" id="map-card">
+                            <button class="map-card-close" id="map-card-close">&times;</button>
+                            <img src="" alt="" class="map-card-img" id="map-card-img">
+                            <div class="map-card-body">
+                                <span class="map-card-tag" id="map-card-tag">Wellness</span>
+                                <h4 class="map-card-title" id="map-card-title">Equinox Sanctuary</h4>
+                                <p class="map-card-desc" id="map-card-desc">Elite private training, rooftop yoga decks, and full-spectrum recovery suites just steps away.</p>
+                                <span class="map-card-distance" id="map-card-distance">2 min walk / 150m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="neighborhood-text reveal-on-scroll">
+                    <h3 class="section-label">Location</h3>
+                    <h2 class="section-title">An Enclave of Culture</h2>
+                    <p class="narrative-paragraph">
+                        Nestled in the city's most secure and culturally vibrant corridor, The Haven offers an unparalleled geographical sanctuary. Our residents enjoy walking proximity to the botanical gardens, private clubs, and highly-curated luxury boutiques.
+                    </p>
+                    <p class="narrative-paragraph">
+                        Click on the golden hotspots of our custom styled neighborhood map to explore the exclusive wellness sanctuaries, elite galleries, and Michelin culinary options curated within the immediate vicinity.
+                    </p>
+                    
+                    <ul class="neighborhood-list">
+                        <li data-target-spot="michelin">
+                            <span class="spot-icon">✦</span>
+                            <div>
+                                <strong>L'Ambroisie Dining</strong>
+                                <span>3 Michelin-star gastronomic architecture (4 min walk)</span>
+                            </div>
+                        </li>
+                        <li data-target-spot="gallery">
+                            <span class="spot-icon">✦</span>
+                            <div>
+                                <strong>Marlborough Gallery</strong>
+                                <span>Contemporary modern sculpture &amp; masterpieces (6 min walk)</span>
+                            </div>
+                        </li>
+                        <li data-target-spot="wellness">
+                            <span class="spot-icon">✦</span>
+                            <div>
+                                <strong>The Obsidian Club</strong>
+                                <span>Hyperbaric wellness chamber &amp; athletic sanctuary (3 min walk)</span>
+                            </div>
+                        </li>
+                        <li data-target-spot="gardens">
+                            <span class="spot-icon">✦</span>
+                            <div>
+                                <strong>Royal Botanical Conservatory</strong>
+                                <span>200 acres of historic greenery and quiet walks (5 min walk)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Private Viewing Form Section -->
+    <section class="inquiry-section" id="inquiry">
+        <div class="container">
+            <div class="inquiry-form-container reveal-on-scroll">
+                <div class="inquiry-header">
+                    <h3 class="section-label dark">Exclusive Access</h3>
+                    <h2 class="section-title">Schedule a Private Tour</h2>
+                    <p class="inquiry-subtitle">Private gallery views, scale models, and champagne site walkthroughs are available by strict invitation.</p>
+                </div>
+                
+                <!-- Dynamic active selection badge -->
+                <div class="selected-suite-badge" id="selected-suite-badge">
+                    <span class="badge-dot"></span> Inquiry Focus: <span id="badge-suite-details">Suite 1401 (Penthouse - Mid-rise)</span>
+                </div>
+
+                <!-- Main Form -->
+                <form class="vip-form" id="vip-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="vip-name" name="name" required placeholder=" ">
+                            <label for="vip-name">Full Name</label>
+                            <span class="error-msg">Please enter your full name.</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="vip-email" name="email" required placeholder=" ">
+                            <label for="vip-email">Email Address</label>
+                            <span class="error-msg">Please enter a valid email address.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="vip-phone" name="phone" required placeholder=" ">
+                            <label for="vip-phone">Confidential Contact Number</label>
+                            <span class="error-msg">Please enter your telephone number.</span>
+                        </div>
+                        <div class="form-group">
+                            <select id="vip-suite-select" name="suite" required>
+                                <option value="" disabled>Select Preferred Suite</option>
+                                <option value="suite-1801">Suite 1801 (Penthouse - Upper Levels)</option>
+                                <option value="suite-1401" selected>Suite 1401 (Penthouse - Mid-rise)</option>
+                                <option value="suite-101">Suite 101 (Penthouse - Lower Ground)</option>
+                                <option value="suite-1502">Suite 1502 (2-Bedroom - Upper Levels)</option>
+                                <option value="suite-802">Suite 802 (2-Bedroom - Mid-rise)</option>
+                                <option value="suite-102">Suite 102 (2-Bedroom - Lower Ground)</option>
+                                <option value="suite-1603">Suite 1603 (1-Bedroom Loft - Upper Levels)</option>
+                                <option value="suite-703">Suite 703 (1-Bedroom Loft - Mid-rise)</option>
+                                <option value="suite-103">Suite 103 (1-Bedroom Loft - Lower Ground)</option>
+                            </select>
+                            <label for="vip-suite-select" class="select-label">Preferred Residence</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="vip-notes" name="notes" rows="4" placeholder=" "></textarea>
+                        <label for="vip-notes">Special Security or Concierge Requests</label>
+                    </div>
+
+                    <div class="form-privacy-disclaimer">
+                        By submitting this request, you agree that your details are handled in absolute confidentiality. The Haven will never share or distribute private client dossiers.
+                    </div>
+
+                    <div class="form-submit-container">
+                        <button type="submit" class="btn-gold-full large">Submit VIP Request</button>
+                    </div>
+                </form>
+
+                <!-- Luxurious Success invitation card (Hidden by default) -->
+                <div class="vip-success-card" id="vip-success-card">
+                    <div class="card-seal">✦</div>
+                    <h3 class="success-title">Invitation In Process</h3>
+                    <div class="success-divider"></div>
+                    <p class="success-desc">
+                        Thank you, <span id="success-client-name" class="highlight">Sir/Madam</span>. A bespoke private viewing registration is being compiled for <span id="success-suite-name" class="highlight">Suite 1401</span>.
+                    </p>
+                    <p class="success-desc secondary">
+                        An executive portfolio coordinator will contact you at <span id="success-client-phone" class="highlight">+1...</span> within thirty minutes to verify your security access and arrange private car service.
+                    </p>
+                    <div class="card-footer-seal">THE HAVEN RESIDENCES CONCIERGE SERVICE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">THE HAVEN</h3>
+                    <p class="footer-desc">An elite private enclave of twelve architecturally-carved sanctuary homes.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Navigation</h4>
+                    <a href="#narrative">Philosophy</a>
+                    <a href="#selector">Interactive Console</a>
+                    <a href="#amenities">Bespoke Amenities</a>
+                    <a href="#neighborhood">The Neighborhood</a>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Private Inquiries</h4>
+                    <p>88 Travertine Avenue, Royal Heights</p>
+                    <p>concierge@thehavenresidences.com</p>
+                    <p>+1 (800) 555-0199</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Haven Residences. All Rights Reserved. Confidential portfolio demonstration.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Charter</a>
+                    <a href="#">Terms of Access</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
