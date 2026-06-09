@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             preloader.classList.add('fade-out');
             document.body.classList.remove('no-scroll');
+            
+            // Trigger the hero section entrance animations
+            const heroSection = document.getElementById('hero');
+            if (heroSection) {
+                heroSection.classList.add('start-entrance');
+            }
+            
+            // Slide down the main header navigation
+            const mainHeader = document.getElementById('main-header');
+            if (mainHeader) {
+                mainHeader.classList.add('revealed');
+            }
         }, 2200);
     }
     
