@@ -58,18 +58,110 @@ document.addEventListener('DOMContentLoaded', () => {
                 <rect x="80" y="300" width="310" height="30" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="3,3" />
                 <text x="235" y="320" class="blueprint-text" font-size="9" fill="#C5A059" letter-spacing="1" text-anchor="middle">PANORAMIC SUNSET TERRACE</text>
 
-                <!-- Labels -->
-                <text x="125" y="100" class="blueprint-text" font-size="12" letter-spacing="2" text-anchor="middle">MASTER SUITE</text>
-                <text x="125" y="115" class="blueprint-text-dim" text-anchor="middle">24' x 16'</text>
+                <!-- Detailed Furniture Overlays -->
+                <!-- Master Bed -->
+                <rect x="150" y="55" width="36" height="42" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="154" y="59" width="12" height="8" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="170" y="59" width="12" height="8" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <path d="M 150,85 C 160,85 176,82 186,85" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
                 
-                <text x="410" y="100" class="blueprint-text" font-size="10" letter-spacing="1" text-anchor="middle">BEDROOM 2</text>
-                <text x="410" y="112" class="blueprint-text-dim" text-anchor="middle">14' x 12'</text>
+                <!-- Bedside tables -->
+                <rect x="132" y="55" width="14" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <circle cx="139" cy="61" r="2" fill="#C5A059" opacity="0.6" />
+                <rect x="189" y="55" width="14" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <circle cx="196" cy="61" r="2" fill="#C5A059" opacity="0.6" />
 
-                <text x="320" y="235" class="blueprint-text" font-size="13" letter-spacing="3" text-anchor="middle">GRAND SALON</text>
-                <text x="320" y="250" class="blueprint-text-dim" text-anchor="middle">38' x 20'</text>
+                <!-- Freestanding Tub in Master Bath -->
+                <rect x="45" y="45" width="24" height="45" rx="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="48" y="48" width="18" height="39" rx="9" fill="none" stroke="#C5A059" stroke-width="0.6" opacity="0.8" />
+                <circle cx="57" cy="80" r="1.5" fill="#C5A059" opacity="0.8" />
                 
-                <text x="75" y="75" class="blueprint-text" font-size="9" letter-spacing="1" text-anchor="middle">BATH &amp; SPA</text>
-                <text x="75" y="165" class="blueprint-text" font-size="9" letter-spacing="1" text-anchor="middle">WARDROBE</text>
+                <!-- Double Vanity Sinks -->
+                <rect x="40" y="140" width="12" height="50" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <ellipse cx="46" cy="152" rx="4" ry="6" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <ellipse cx="46" cy="178" rx="4" ry="6" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+
+                <!-- Wardrobe Hanger Lines -->
+                <line x1="42" y1="200" x2="110" y2="200" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.6" />
+                <path d="M 45,200 L 48,196 L 51,200 M 60,200 L 63,196 L 66,200 M 75,200 L 78,196 L 81,200 M 90,200 L 93,196 L 96,200 M 102,200 L 105,196 L 108,200" fill="none" stroke="#C5A059" stroke-width="0.6" opacity="0.5" />
+
+                <!-- Bedroom 2 Bed & Bedside Tables -->
+                <rect x="406" y="55" width="36" height="38" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="410" y="58" width="11" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="427" y="58" width="11" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="390" y="55" width="12" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="446" y="55" width="12" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+
+                <!-- Grand Salon Sectional Sofa & Rug -->
+                <rect x="235" y="175" width="90" height="75" fill="none" stroke="#C5A059" stroke-width="0.5" stroke-dasharray="4,4" opacity="0.4" />
+                <!-- Sofa Blocks -->
+                <path d="M 240,240 L 305,240 L 305,185" fill="none" stroke="#C5A059" stroke-width="12" stroke-linecap="square" opacity="0.25" />
+                <path d="M 234,246 L 311,246 L 311,179" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <path d="M 246,234 L 299,234 L 299,191" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <circle cx="270" cy="210" r="13" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+
+                <!-- Grand Piano -->
+                <path d="M 405,200 C 405,178 430,178 440,192 C 452,198 452,220 435,225 L 405,225 Z" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <line x1="405" y1="200" x2="405" y2="225" stroke="#C5A059" stroke-width="1.2" opacity="0.8" />
+                <!-- Piano bench -->
+                <rect x="394" y="206" width="6" height="13" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+
+                <!-- Dining Room Table & Chairs -->
+                <rect x="350" y="100" width="55" height="30" rx="3" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <!-- 6 Chairs -->
+                <rect x="358" y="93" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="373" y="93" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="388" y="93" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="358" y="131" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="373" y="131" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="388" y="131" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+
+                <!-- Terrace loungers & trees -->
+                <!-- Lounger 1 -->
+                <rect x="100" y="306" width="26" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <line x1="108" y1="306" x2="108" y2="318" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <line x1="100" y1="310" x2="108" y2="310" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <!-- Lounger 2 -->
+                <rect x="140" y="306" width="26" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <line x1="148" y1="306" x2="148" y2="318" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <line x1="140" y1="310" x2="148" y2="310" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <!-- Potted Tree -->
+                <g transform="translate(360, 314)">
+                    <circle r="8" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                    <circle r="3" fill="none" stroke="#C5A059" stroke-width="0.5" opacity="0.8" />
+                    <path d="M-6,0 L6,0 M0,-6 L0,6 M-4,-4 L4,4 M-4,4 L4,-4" stroke="#C5A059" stroke-width="0.5" opacity="0.7" />
+                </g>
+
+                <!-- North Arrow -->
+                <g transform="translate(445, 52)" stroke="#C5A059" stroke-width="0.8" fill="none">
+                    <circle r="12" stroke-dasharray="2,2" opacity="0.6" />
+                    <path d="M0,-14 L4,-2 L0,-5 L-4,-2 Z" fill="#C5A059" stroke="none" />
+                    <line x1="0" y1="-5" x2="0" y2="10" opacity="0.8" />
+                    <text x="0" y="-17" font-family="Inter" font-size="7" fill="#C5A059" text-anchor="middle" font-weight="bold">N</text>
+                </g>
+
+                <!-- Custom Stamp Title Block -->
+                <g transform="translate(315, 270)" font-family="Inter">
+                    <rect width="145" height="48" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                    <line x1="0" y1="13" x2="145" y2="13" stroke="#C5A059" stroke-width="0.5" opacity="0.6" />
+                    <text x="6" y="9" font-size="7" font-weight="bold" fill="#1D201F" letter-spacing="0.5">THE HAVEN RESIDENCES</text>
+                    <text x="6" y="23" font-size="7" font-weight="bold" fill="#C5A059">UNIT 1801 - PENTHOUSE</text>
+                    <text x="6" y="33" font-size="6" fill="#6E7370" letter-spacing="0.5">SCALE: 1/8" = 1'-0"</text>
+                    <text x="6" y="42" font-size="6" fill="#6E7370" letter-spacing="0.5">ATELIER ARCHITECTS</text>
+                </g>
+
+                <!-- Labels -->
+                <text x="125" y="112" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">MASTER SUITE</text>
+                <text x="125" y="123" class="blueprint-text-dim" text-anchor="middle">24' x 16'</text>
+                
+                <text x="410" y="105" class="blueprint-text" font-size="9" letter-spacing="1" text-anchor="middle">BEDROOM 2</text>
+                <text x="410" y="116" class="blueprint-text-dim" text-anchor="middle">14' x 12'</text>
+
+                <text x="320" y="160" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">GRAND SALON</text>
+                <text x="320" y="171" class="blueprint-text-dim" text-anchor="middle">38' x 20'</text>
+                
+                <text x="75" y="108" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">BATH &amp; SPA</text>
+                <text x="75" y="215" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">WARDROBE</text>
             </svg>
         `,
         suite: `
@@ -102,30 +194,92 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!-- Doors & Arcs -->
                 <path d="M 210,180 A 40,40 0 0,0 250,220" class="blueprint-door-arc" />
                 <line x1="210" y1="180" x2="210" y2="220" stroke="#C5A059" stroke-width="1" />
+
+                <!-- Detailed Furniture Overlays -->
+                <!-- Master Bed -->
+                <rect x="175" y="55" width="36" height="38" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="179" y="58" width="12" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="195" y="58" width="12" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="157" y="55" width="12" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="217" y="55" width="12" height="12" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
                 
-                <!-- Terrace -->
+                <!-- Suite 2 Bed -->
+                <rect x="390" y="55" width="32" height="35" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="393" y="58" width="10" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                <rect x="408" y="58" width="10" height="7" rx="1" fill="none" stroke="#C5A059" stroke-width="0.7" opacity="0.8" />
+                
+                <!-- Living Salon Sofa & Rug -->
+                <rect x="60" y="210" width="80" height="70" fill="none" stroke="#C5A059" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4" />
+                <path d="M 65,270 L 120,270 L 120,215" fill="none" stroke="#C5A059" stroke-width="10" stroke-linecap="square" opacity="0.25" />
+                <path d="M 60,275 L 125,275 L 125,210" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <path d="M 70,265 L 115,265 L 115,220" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <circle cx="92" cy="242" r="10" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+
+                <!-- Dining & Kitchen Island -->
+                <rect x="300" y="215" width="16" height="50" rx="2" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <circle cx="324" cy="225" r="3.5" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <circle cx="324" cy="240" r="3.5" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <circle cx="324" cy="255" r="3.5" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <!-- Dining Table -->
+                <rect x="370" y="220" width="45" height="28" rx="2" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="378" y="213" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="398" y="213" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="378" y="249" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="398" y="249" width="8" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+
+                <!-- Freestanding Tub in Master Suite Bath -->
+                <ellipse cx="90" cy="65" rx="18" ry="10" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <ellipse cx="90" cy="65" rx="14" ry="7" fill="none" stroke="#C5A059" stroke-width="0.6" opacity="0.8" />
+
+                <!-- Balcony planter and loungers -->
                 <rect x="420" y="200" width="40" height="90" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="3,3" />
                 <text x="440" y="245" class="blueprint-text" font-size="9" fill="#C5A059" letter-spacing="1" text-anchor="middle" transform="rotate(90 440 245)">CANOPY BALCONY</text>
+                <!-- Balcony Chair -->
+                <rect x="430" y="215" width="18" height="15" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" transform="rotate(45 439 222)" />
+                <circle cx="440" cy="275" r="5" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+
+                <!-- North Arrow -->
+                <g transform="translate(435, 52)" stroke="#C5A059" stroke-width="0.8" fill="none">
+                    <circle r="11" stroke-dasharray="2,2" opacity="0.6" />
+                    <path d="M0,-13 L3.5,-2 L0,-4.5 L-3.5,-2 Z" fill="#C5A059" stroke="none" />
+                    <line x1="0" y1="-4" x2="0" y2="9" opacity="0.8" />
+                </g>
+
+                <!-- Custom Stamp Title Block -->
+                <g transform="translate(305, 270)" font-family="Inter">
+                    <rect width="145" height="48" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                    <line x1="0" y1="13" x2="145" y2="13" stroke="#C5A059" stroke-width="0.5" opacity="0.6" />
+                    <text x="6" y="9" font-size="7" font-weight="bold" fill="#1D201F" letter-spacing="0.5">THE HAVEN RESIDENCES</text>
+                    <text x="6" y="23" font-size="7" font-weight="bold" fill="#C5A059">UNIT 1502 - SUITE</text>
+                    <text x="6" y="33" font-size="6" fill="#6E7370" letter-spacing="0.5">SCALE: 1/8" = 1'-0"</text>
+                    <text x="6" y="42" font-size="6" fill="#6E7370" letter-spacing="0.5">ATELIER ARCHITECTS</text>
+                </g>
 
                 <!-- Labels -->
-                <text x="145" y="100" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">MASTER BEDROOM</text>
-                <text x="145" y="112" class="blueprint-text-dim" text-anchor="middle">18' x 15'</text>
+                <text x="145" y="115" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">MASTER BEDROOM</text>
+                <text x="145" y="126" class="blueprint-text-dim" text-anchor="middle">18' x 15'</text>
 
-                <text x="355" y="90" class="blueprint-text" font-size="10" letter-spacing="1" text-anchor="middle">SUITE 2</text>
-                <text x="355" y="102" class="blueprint-text-dim" text-anchor="middle">14' x 11'</text>
+                <text x="355" y="110" class="blueprint-text" font-size="10" letter-spacing="1" text-anchor="middle">SUITE 2</text>
+                <text x="355" y="121" class="blueprint-text-dim" text-anchor="middle">14' x 11'</text>
 
-                <text x="145" y="250" class="blueprint-text" font-size="12" letter-spacing="3" text-anchor="middle">LIVING SALON</text>
-                <text x="145" y="265" class="blueprint-text-dim" text-anchor="middle">24' x 18'</text>
+                <text x="145" y="230" class="blueprint-text" font-size="12" letter-spacing="3" text-anchor="middle">LIVING SALON</text>
+                <text x="145" y="243" class="blueprint-text-dim" text-anchor="middle">24' x 18'</text>
 
-                <text x="330" y="250" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">DINING &amp; KITCHEN</text>
-                <text x="330" y="265" class="blueprint-text-dim" text-anchor="middle">18' x 16'</text>
+                <text x="355" y="188" class="blueprint-text" font-size="10" letter-spacing="1.5" text-anchor="middle">DINING &amp; KITCHEN</text>
+                <text x="355" y="199" class="blueprint-text-dim" text-anchor="middle">18' x 16'</text>
                 
-                <text x="90" y="70" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">MASTER EN-SUITE</text>
-                <text x="410" y="70" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">BATH 2</text>
+                <text x="90" y="105" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">MASTER EN-SUITE</text>
+                <text x="410" y="152" class="blueprint-text" font-size="8" letter-spacing="0.5" text-anchor="middle">BATH 2</text>
             </svg>
         `,
         loft: `
             <svg viewBox="0 0 500 350" width="100%" height="100%" class="blueprint-svg">
+                <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#C5A059"/>
+                    </marker>
+                </defs>
+                
                 <rect width="100%" height="100%" fill="none"/>
                 
                 <!-- Dimensions Outline (Feet) -->
@@ -142,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <line x1="300" y1="160" x2="300" y2="30" class="blueprint-interior-wall" stroke-width="2" />
                 
                 <!-- Glass facade indicator -->
-                <line x1="440" y1="30" x2="440" y2="330" stroke="#C5A059" stroke-width="3" />
+                <line x1="440" y1="30" x2="440" y2="330" stroke="#C5A059" stroke-width="3" opacity="0.6" />
                 <line x1="435" y1="30" x2="435" y2="330" stroke="#FFFFFF" stroke-width="1" />
                 
                 <!-- Columns -->
@@ -150,33 +304,74 @@ document.addEventListener('DOMContentLoaded', () => {
                 <rect x="180" y="155" width="10" height="10" fill="#1D201F" stroke="#C5A059" stroke-width="1" />
                 
                 <!-- Spiral staircase vector symbol -->
-                <g transform="translate(120, 240)" stroke="#C5A059" stroke-width="1" fill="none">
-                    <circle r="22" stroke-dasharray="3,3"/>
+                <g transform="translate(110, 230)" stroke="#C5A059" stroke-width="1" fill="none">
+                    <circle r="20" stroke-dasharray="2,2" opacity="0.7"/>
                     <circle r="4" fill="#C5A059"/>
-                    <line x1="0" y1="0" x2="22" y2="0"/>
-                    <line x1="0" y1="0" x2="15" y2="15"/>
-                    <line x1="0" y1="0" x2="0" y2="22"/>
-                    <line x1="0" y1="0" x2="-15" y2="15"/>
-                    <line x1="0" y1="0" x2="-22" y2="0"/>
-                    <line x1="0" y1="0" x2="-15" y2="-15"/>
-                    <line x1="0" y1="0" x2="0" y2="-22"/>
-                    <line x1="0" y1="0" x2="15" y2="-15"/>
+                    <line x1="0" y1="0" x2="20" y2="0"/>
+                    <line x1="0" y1="0" x2="14" y2="14"/>
+                    <line x1="0" y1="0" x2="0" y2="20"/>
+                    <line x1="0" y1="0" x2="-14" y2="14"/>
+                    <line x1="0" y1="0" x2="-20" y2="0"/>
+                    <line x1="0" y1="0" x2="-14" y2="-14"/>
+                    <line x1="0" y1="0" x2="0" y2="-20"/>
+                    <line x1="0" y1="0" x2="14" y2="-14"/>
+                    <path d="M 17,-8 A 18,18 0 1,0 12,12" stroke-width="0.8" stroke-dasharray="none" marker-end="url(#arrow)" />
                 </g>
 
-                <!-- Outdoor Balcony -->
+                <!-- Detailed Furniture Overlays -->
+                <!-- Sofa in Lower Living Gallery -->
+                <rect x="200" y="210" width="80" height="70" fill="none" stroke="#C5A059" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.4" />
+                <path d="M 210,265 L 265,265 L 265,220" fill="none" stroke="#C5A059" stroke-width="8" stroke-linecap="square" opacity="0.25" />
+                <path d="M 205,270 L 270,270 L 270,215" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <circle cx="232" cy="238" r="9" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                
+                <!-- Atelier Table and Easel -->
+                <rect x="130" y="80" width="35" height="22" rx="1.5" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+                <rect x="142" y="73" width="10" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <rect x="142" y="103" width="10" height="6" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                <!-- Easel -->
+                <path d="M 230,105 L 240,75 L 250,105 Z M 225,97 L 255,97" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.8" />
+
+                <!-- Upper Loft Area (Dashed representation) -->
+                <rect x="65" y="35" width="230" height="120" fill="none" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="4,4" opacity="0.5" />
+                <!-- Loft Bed in upper layout -->
+                <rect x="80" y="50" width="36" height="35" fill="none" stroke="#C5A059" stroke-dasharray="2,2" opacity="0.7" />
+                <line x1="80" y1="70" x2="116" y2="70" stroke="#C5A059" stroke-dasharray="2,2" stroke-width="0.8" opacity="0.7" />
+
+                <!-- Outdoor Retreat Portico -->
                 <rect x="220" y="300" width="140" height="30" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="3,3" />
                 <text x="290" y="320" class="blueprint-text" font-size="9" fill="#C5A059" letter-spacing="1" text-anchor="middle">PRIVATE RETREAT PORTICO</text>
+                <!-- Loungers -->
+                <rect x="240" y="306" width="22" height="10" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+                <rect x="275" y="306" width="22" height="10" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.7" />
+
+                <!-- North Arrow -->
+                <g transform="translate(420, 52)" stroke="#C5A059" stroke-width="0.8" fill="none">
+                    <circle r="11" stroke-dasharray="2,2" opacity="0.6" />
+                    <path d="M0,-13 L3.5,-2 L0,-4.5 L-3.5,-2 Z" fill="#C5A059" stroke="none" />
+                    <line x1="0" y1="-4" x2="0" y2="9" opacity="0.8" />
+                </g>
+
+                <!-- Custom Stamp Title Block -->
+                <g transform="translate(285, 270)" font-family="Inter">
+                    <rect width="145" height="48" fill="none" stroke="#C5A059" stroke-width="0.8" opacity="0.6" />
+                    <line x1="0" y1="13" x2="145" y2="13" stroke="#C5A059" stroke-width="0.5" opacity="0.6" />
+                    <text x="6" y="9" font-size="7" font-weight="bold" fill="#1D201F" letter-spacing="0.5">THE HAVEN RESIDENCES</text>
+                    <text x="6" y="23" font-size="7" font-weight="bold" fill="#C5A059">UNIT 1603 - LOFT</text>
+                    <text x="6" y="33" font-size="6" fill="#6E7370" letter-spacing="0.5">SCALE: 1/8" = 1'-0"</text>
+                    <text x="6" y="42" font-size="6" fill="#6E7370" letter-spacing="0.5">ATELIER ARCHITECTS</text>
+                </g>
 
                 <!-- Labels -->
-                <text x="180" y="90" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">ATELIER SALON</text>
-                <text x="180" y="105" class="blueprint-text-dim" text-anchor="middle">22' x 14' (Double-Height)</text>
+                <text x="180" y="125" class="blueprint-text" font-size="11" letter-spacing="2" text-anchor="middle">ATELIER SALON</text>
+                <text x="180" y="137" class="blueprint-text-dim" text-anchor="middle">22' x 14' (Double-Height)</text>
 
-                <text x="370" y="90" class="blueprint-text" font-size="9" letter-spacing="1" text-anchor="middle">BATH</text>
+                <text x="350" y="90" class="blueprint-text" font-size="9" letter-spacing="1" text-anchor="middle">BATH</text>
                 
-                <text x="290" y="220" class="blueprint-text" font-size="13" letter-spacing="3" text-anchor="middle">LIVING GALLERY</text>
-                <text x="290" y="235" class="blueprint-text-dim" text-anchor="middle">28' x 20' (Loft Space Below)</text>
+                <text x="290" y="195" class="blueprint-text" font-size="12" letter-spacing="3" text-anchor="middle">LIVING GALLERY</text>
+                <text x="290" y="208" class="blueprint-text-dim" text-anchor="middle">28' x 20' (Loft Space Below)</text>
                 
-                <text x="120" y="280" class="blueprint-text" font-size="8" fill="#C5A059" letter-spacing="0.5" text-anchor="middle">SPIRAL STAIRS</text>
+                <text x="110" y="265" class="blueprint-text" font-size="8" fill="#C5A059" letter-spacing="0.5" text-anchor="middle">SPIRAL STAIRS</text>
                 <text x="420" y="180" class="blueprint-text" font-size="9" fill="#C5A059" letter-spacing="1" text-anchor="middle" transform="rotate(-90 420 180)">DOUBLE-HEIGHT ARCH GLASS</text>
             </svg>
         `
@@ -556,14 +751,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const info = hotspotsDatabase[spotKey];
         if (!info) return;
 
-        // Deactivate all hotspots and list highlights
-        mapHotspots.forEach(hs => hs.querySelector('circle:last-child').setAttribute('fill', '#C5A059'));
+        // Reset all hotspots and list highlights
+        mapHotspots.forEach(hs => {
+            const innerCircle = hs.querySelector('circle:not(.pulse)');
+            if (innerCircle) {
+                innerCircle.setAttribute('fill', '#FAF8F5');
+                innerCircle.setAttribute('stroke', '#C5A059');
+            }
+            const paths = hs.querySelectorAll('path');
+            paths.forEach(p => p.setAttribute('stroke', '#C5A059'));
+        });
         neighborhoodListItems.forEach(li => li.style.borderBottomColor = 'var(--color-sand-dark)');
 
         // Highlight active vector elements
         if (targetElement) {
-            const innerCircle = targetElement.querySelector('circle:last-child');
-            if (innerCircle) innerCircle.setAttribute('fill', '#2F3D33');
+            const innerCircle = targetElement.querySelector('circle:not(.pulse)');
+            if (innerCircle) {
+                innerCircle.setAttribute('fill', '#2F3D33');
+                innerCircle.setAttribute('stroke', '#C5A059');
+            }
+            const paths = targetElement.querySelectorAll('path');
+            paths.forEach(p => p.setAttribute('stroke', '#FAF8F5'));
         }
 
         // Highlight matching list element in right column
@@ -580,8 +788,37 @@ document.addEventListener('DOMContentLoaded', () => {
         mapCardDesc.textContent = info.desc;
         mapCardDistance.textContent = info.distance;
 
-        // Position the card elegantly relative to the hotspot
-        // Since we are inside absolute vector views, we position the floating card adaptively
+        // Position the card elegantly relative to the hotspot (Percentage-based adaptive popover)
+        if (targetElement) {
+            const transform = targetElement.getAttribute('transform');
+            const matches = transform ? transform.match(/translate\(([^,]+),\s*([^)]+)\)/) : null;
+            if (matches) {
+                const x = parseFloat(matches[1]);
+                const y = parseFloat(matches[2]);
+                
+                const leftPercent = (x / 800) * 100;
+                const topPercent = (y / 500) * 100;
+                
+                mapCard.style.left = `${leftPercent}%`;
+                mapCard.style.top = `${topPercent}%`;
+                
+                // Clear positioning classes and re-evaluate
+                mapCard.className = 'map-card';
+                
+                if (topPercent < 45) {
+                    mapCard.classList.add('pos-bottom');
+                } else {
+                    mapCard.classList.add('pos-top');
+                }
+                
+                if (leftPercent < 25) {
+                    mapCard.classList.add('pos-left');
+                } else if (leftPercent > 75) {
+                    mapCard.classList.add('pos-right');
+                }
+            }
+        }
+
         mapCard.classList.add('active');
     }
 
@@ -608,14 +845,30 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         mapCard.classList.remove('active');
         // Re-establish original fill elements
-        mapHotspots.forEach(hs => hs.querySelector('circle:last-child').setAttribute('fill', '#C5A059'));
+        mapHotspots.forEach(hs => {
+            const innerCircle = hs.querySelector('circle:not(.pulse)');
+            if (innerCircle) {
+                innerCircle.setAttribute('fill', '#FAF8F5');
+                innerCircle.setAttribute('stroke', '#C5A059');
+            }
+            const paths = hs.querySelectorAll('path');
+            paths.forEach(p => p.setAttribute('stroke', '#C5A059'));
+        });
         neighborhoodListItems.forEach(li => li.style.borderBottomColor = 'var(--color-sand-dark)');
     });
 
     // Clicking anywhere else on the map closes active overlays
     document.getElementById('interactive-map').addEventListener('click', () => {
         mapCard.classList.remove('active');
-        mapHotspots.forEach(hs => hs.querySelector('circle:last-child').setAttribute('fill', '#C5A059'));
+        mapHotspots.forEach(hs => {
+            const innerCircle = hs.querySelector('circle:not(.pulse)');
+            if (innerCircle) {
+                innerCircle.setAttribute('fill', '#FAF8F5');
+                innerCircle.setAttribute('stroke', '#C5A059');
+            }
+            const paths = hs.querySelectorAll('path');
+            paths.forEach(p => p.setAttribute('stroke', '#C5A059'));
+        });
         neighborhoodListItems.forEach(li => li.style.borderBottomColor = 'var(--color-sand-dark)');
     });
 
@@ -648,12 +901,29 @@ document.addEventListener('DOMContentLoaded', () => {
        6. PARALLAX EFFECT FOR HERO IMAGE
        ========================================================================== */
 
-    const heroBg = document.querySelector('.hero-bg');
+    const heroBgWrapper = document.querySelector('.hero-bg-wrapper');
+    const heroFrame = document.getElementById('hero-frame');
+    
     window.addEventListener('scroll', () => {
         const scrollOffset = window.pageYOffset;
-        // Shift background slightly slower than normal scrolling rate (0.15 velocity)
-        if (heroBg) {
-            heroBg.style.transform = `translateY(${scrollOffset * 0.15}px) scale(1.05)`;
+        
+        // Update Scroll Progress Bar
+        const progressBar = document.getElementById('scroll-progress');
+        if (progressBar) {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollFraction = scrollHeight > 0 ? scrollOffset / scrollHeight : 0;
+            progressBar.style.width = `${scrollFraction * 100}%`;
+        }
+
+        // Shift background wrapper slightly slower than normal scrolling rate (0.12 velocity)
+        if (heroBgWrapper) {
+            heroBgWrapper.style.transform = `translateY(${scrollOffset * 0.12}px)`;
+        }
+
+        // Fade out hero frame inset border as you scroll
+        if (heroFrame) {
+            const opacity = Math.max(0, 1 - (scrollOffset / 400));
+            heroFrame.style.opacity = opacity;
         }
 
         // Handle scrolling header shrinking
@@ -665,6 +935,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Hero Section Slideshow Controller (Crossfade)
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let currentHeroSlide = 0;
+    
+    function nextHeroSlide() {
+        if (heroSlides.length === 0) return;
+        heroSlides[currentHeroSlide].classList.remove('active');
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        heroSlides[currentHeroSlide].classList.add('active');
+    }
+    
+    // Rotate hero slides every 7 seconds
+    if (heroSlides.length > 0) {
+        setInterval(nextHeroSlide, 7000);
+    }
+
 
     /* ==========================================================================
        7. MOBILE MENU RESPONSIVE CONTROLLER
@@ -673,6 +959,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-item');
+    const mobileNavCta = document.querySelector('.mobile-nav-cta');
 
     function toggleMobileMenu() {
         menuToggle.classList.toggle('active');
@@ -689,6 +976,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    if (mobileNavCta) {
+        mobileNavCta.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+    }
 
 
     /* ==========================================================================
