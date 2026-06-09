@@ -650,28 +650,51 @@
                 </div>
 
                 <!-- Main Form -->
-                <form class="vip-form" id="vip-form" novalidate>
+                <form class="vip-form" id="vip-form" action="https://formspree.io/f/xbdeyonq" method="POST" novalidate>
+                    <!-- Formspree Configurations -->
+                    <input type="hidden" name="_next" value="https://boutique-real-estate-showcase.vercel.app/#contact">
+                    <input type="text" name="_gotcha" style="display:none">
                     <div class="form-row">
-                        <div class="form-group">
+                        <div class="form-group input-group">
                             <input type="text" id="vip-name" name="name" required placeholder=" ">
                             <label for="vip-name">Full Name</label>
+                            <span class="input-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </span>
+                            <div class="input-focus-line"></div>
                             <span class="error-msg">Please enter your full name.</span>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group input-group">
                             <input type="email" id="vip-email" name="email" required placeholder=" ">
                             <label for="vip-email">Email Address</label>
+                            <span class="input-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </span>
+                            <div class="input-focus-line"></div>
                             <span class="error-msg">Please enter a valid email address.</span>
                         </div>
                     </div>
                     
                     <div class="form-row">
-                        <div class="form-group">
+                        <div class="form-group input-group">
                             <input type="tel" id="vip-phone" name="phone" required placeholder=" ">
                             <label for="vip-phone">Confidential Contact Number</label>
+                            <span class="input-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                            <div class="input-focus-line"></div>
                             <span class="error-msg">Please enter your telephone number.</span>
                         </div>
-                        <div class="form-group">
-                            <select id="vip-suite-select" name="suite" required>
+                        <div class="form-group select-group">
+                            <select id="vip-suite-select" name="suite" required style="display: none;">
                                 <option value="" disabled>Select Preferred Suite</option>
                                 <option value="suite-1801">Suite 1801 (Penthouse - Upper Levels)</option>
                                 <option value="suite-1401" selected>Suite 1401 (Penthouse - Mid-rise)</option>
@@ -683,7 +706,26 @@
                                 <option value="suite-703">Suite 703 (1-Bedroom Loft - Mid-rise)</option>
                                 <option value="suite-103">Suite 103 (1-Bedroom Loft - Lower Ground)</option>
                             </select>
-                            <label for="vip-suite-select" class="select-label">Preferred Residence</label>
+                            
+                            <div class="custom-select" id="custom-suite-select">
+                                <div class="custom-select-trigger">
+                                    <span id="custom-select-val">Suite 1401 (Penthouse - Mid-rise)</span>
+                                    <span class="custom-select-arrow"></span>
+                                </div>
+                                <div class="custom-select-options">
+                                    <div class="custom-select-option" data-value="suite-1801">Suite 1801 (Penthouse - Upper Levels)</div>
+                                    <div class="custom-select-option selected" data-value="suite-1401">Suite 1401 (Penthouse - Mid-rise)</div>
+                                    <div class="custom-select-option" data-value="suite-101">Suite 101 (Penthouse - Lower Ground)</div>
+                                    <div class="custom-select-option" data-value="suite-1502">Suite 1502 (2-Bedroom - Upper Levels)</div>
+                                    <div class="custom-select-option" data-value="suite-802">Suite 802 (2-Bedroom - Mid-rise)</div>
+                                    <div class="custom-select-option" data-value="suite-102">Suite 102 (2-Bedroom - Lower Ground)</div>
+                                    <div class="custom-select-option" data-value="suite-1603">Suite 1603 (1-Bedroom Loft - Upper Levels)</div>
+                                    <div class="custom-select-option" data-value="suite-703">Suite 703 (1-Bedroom Loft - Mid-rise)</div>
+                                    <div class="custom-select-option" data-value="suite-103">Suite 103 (1-Bedroom Loft - Lower Ground)</div>
+                                </div>
+                            </div>
+                            <label for="vip-suite-select" class="select-label active">Preferred Residence</label>
+                            <span class="error-msg">Please select your preferred suite.</span>
                         </div>
                     </div>
 

@@ -729,10 +729,79 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Custom select dropdown controller
+    const customSelect = document.getElementById('custom-suite-select');
+    if (customSelect) {
+        const trigger = customSelect.querySelector('.custom-select-trigger');
+        const triggerText = customSelect.querySelector('#custom-select-val');
+        const customOptions = customSelect.querySelectorAll('.custom-select-option');
+        
+        // Toggle dropdown open/close
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            customSelect.classList.toggle('open');
+            customSelect.closest('.form-group').classList.add('select-focused');
+        });
+        
+        // Click option handler
+        customOptions.forEach(opt => {
+            opt.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const selectedVal = opt.getAttribute('data-value');
+                const selectedText = opt.textContent;
+                
+                // Update trigger text
+                triggerText.textContent = selectedText;
+                
+                // Reset selected options and apply to clicked one
+                customOptions.forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                
+                // Update native select element
+                vipSuiteSelect.value = selectedVal;
+                vipSuiteSelect.dispatchEvent(new Event('change'));
+                
+                // Close dropdown
+                customSelect.classList.remove('open');
+                customSelect.closest('.form-group').classList.remove('select-focused');
+                
+                // Clear validation error if any
+                customSelect.closest('.form-group').classList.remove('invalid');
+            });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            if (customSelect.classList.contains('open')) {
+                customSelect.classList.remove('open');
+                customSelect.closest('.form-group').classList.remove('select-focused');
+            }
+        });
+    }
+
     // Synchronize selector changes directly into inquiry select badge on change
     vipSuiteSelect.addEventListener('change', () => {
         const selectedValue = vipSuiteSelect.value;
         if (!selectedValue) return;
+
+        // Update custom select trigger text and option active states
+        if (customSelect) {
+            const triggerText = customSelect.querySelector('#custom-select-val');
+            const customOptions = customSelect.querySelectorAll('.custom-select-option');
+            const selectedText = vipSuiteSelect.options[vipSuiteSelect.selectedIndex].text;
+            
+            if (triggerText) {
+                triggerText.textContent = selectedText;
+            }
+            
+            customOptions.forEach(opt => {
+                if (opt.getAttribute('data-value') === selectedValue) {
+                    opt.classList.add('selected');
+                } else {
+                    opt.classList.remove('selected');
+                }
+            });
+        }
 
         const suiteNum = selectedValue.replace('suite-', '');
         
@@ -1193,6 +1262,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const isSuiteValid = checkField(vipSuiteSelect);
 
         if (isNameValid && isEmailValid && isPhoneValid && isSuiteValid) {
+            // Submit form to Formspree via AJAX
+            const formData = new FormData(vipForm);
+            
+            fetch(vipForm.getAttribute('action'), {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Form successfully submitted to Formspree');
+                } else {
+                    console.error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+
             // Retrieve chosen selections to personalize success dashboard details
             const chosenClient = inputName.value.trim();
             const chosenPhone = inputPhone.value.trim();
