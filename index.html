@@ -17,7 +17,26 @@
     <!-- Favicon: Signature Champagne Gold Star Seal (Enlarged for browser tab visibility) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><path d=%22M16 1 L19 13 L31 16 L19 19 L16 31 L13 19 L1 16 L13 13 Z%22 fill=%22%23C5A059%22/></svg>">
 </head>
-<body>
+<body class="no-scroll">
+    <!-- Custom Cursor elements -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Gold Preloader screen -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <svg width="120" height="150" viewBox="0 0 120 150" class="preloader-arch-svg">
+                <path d="M 10,140 L 10,60 A 50,50 0 0,1 110,60 L 110,140" stroke="#C5A059" stroke-width="1.5" fill="none" class="arch-path"/>
+                <path d="M 60,25 L 62.5,32 L 70,32 L 64,36.5 L 66,44 L 60,39.5 L 54,44 L 56,36.5 L 50,32 L 57.5,32 Z" fill="#C5A059" class="preloader-star"/>
+                <line x1="42" y1="70" x2="42" y2="100" stroke="#C5A059" stroke-width="1.5" class="h-line"/>
+                <line x1="78" y1="70" x2="78" y2="100" stroke="#C5A059" stroke-width="1.5" class="h-line"/>
+                <line x1="42" y1="85" x2="78" y2="85" stroke="#C5A059" stroke-width="1.5" class="h-line"/>
+            </svg>
+            <div class="preloader-brand">THE HAVEN</div>
+            <div class="preloader-subtitle">RESIDENCES</div>
+        </div>
+    </div>
+
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
@@ -61,6 +80,7 @@
             <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="hero-overlay"></div>
+            <div class="light-leak-overlay"></div>
         </div>
         
         <div class="hero-content">
@@ -118,8 +138,116 @@
                     </div>
                 </div>
                 <div class="narrative-image-wrapper reveal-on-scroll delay-1">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Exquisite Travertine Detailing at The Haven" class="narrative-img">
+                    <div class="image-reveal-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Exquisite Travertine Detailing at The Haven" class="narrative-img">
+                    </div>
                     <div class="image-accent-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Residences Collection (Property Grid Cards) -->
+    <section class="residences-section" id="collection">
+        <div class="container">
+            <div class="residences-header reveal-on-scroll">
+                <h3 class="section-label">The Collection</h3>
+                <h2 class="section-title">The Sanctuary Residences</h2>
+                <p class="section-subtitle">Three architectural typologies, crafted with absolute fidelity to light, stone, and space. Select a residence below to interact with its floorplan.</p>
+            </div>
+            
+            <div class="residences-grid">
+                <!-- Property Card 1: Penthouse -->
+                <div class="property-card reveal-on-scroll">
+                    <div class="property-image-wrapper image-reveal-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Haven Travertine Penthouse" class="property-img">
+                        <div class="property-badge">Suite 1801</div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Travertine Penthouse</h3>
+                        <p class="property-desc">A crowning achievement spanning the top levels. Featuring double-vaulted ceilings, stone arches, and panoramic twilight skyline vistas.</p>
+                        
+                        <div class="property-specs">
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Area</span>
+                                <span class="prop-spec-val">3,450 sq ft</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Ceilings</span>
+                                <span class="prop-spec-val">14' 0"</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Terraces</span>
+                                <span class="prop-spec-val">3 Wrap-around</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-gold-full card-cta-btn" data-target-unit="penthouse" data-target-floor="upper">
+                            Configure Layout ✦
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 2: Suite -->
+                <div class="property-card reveal-on-scroll delay-1">
+                    <div class="property-image-wrapper image-reveal-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="The Haven Canopy Suite" class="property-img">
+                        <div class="property-badge">Suite 802</div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Mid-Rise Canopy Suite</h3>
+                        <p class="property-desc">A harmonious two-bedroom sanctuary overlooking the historic botanical gardens. Balanced proportions finished in warm bronze panels.</p>
+                        
+                        <div class="property-specs">
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Area</span>
+                                <span class="prop-spec-val">1,810 sq ft</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Ceilings</span>
+                                <span class="prop-spec-val">10' 8"</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Terraces</span>
+                                <span class="prop-spec-val">1 Extended</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-gold-full card-cta-btn" data-target-unit="suite" data-target-floor="mid">
+                            Configure Layout ✦
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 3: Loft -->
+                <div class="property-card reveal-on-scroll delay-2">
+                    <div class="property-image-wrapper image-reveal-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="The Haven Atelier Loft" class="property-img">
+                        <div class="property-badge">Suite 703</div>
+                    </div>
+                    <div class="property-info">
+                        <h3 class="property-title">The Double-Height Loft</h3>
+                        <p class="property-desc">An open-concept gallery home characterized by triple-height glass arches, a custom spiral stone staircase, and light-filled atelier salons.</p>
+                        
+                        <div class="property-specs">
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Area</span>
+                                <span class="prop-spec-val">1,200 sq ft</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Ceilings</span>
+                                <span class="prop-spec-val">18' 0"</span>
+                            </div>
+                            <div class="prop-spec-item">
+                                <span class="prop-spec-label">Terraces</span>
+                                <span class="prop-spec-val">1 Portico</span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-gold-full card-cta-btn" data-target-unit="loft" data-target-floor="mid">
+                            Configure Layout ✦
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

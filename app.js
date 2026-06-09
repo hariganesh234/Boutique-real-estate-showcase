@@ -5,6 +5,74 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
+       0. PRELOADER & CUSTOM CURSOR HANDLERS
+       ========================================================================== */
+       
+    // Preloader fade-out logic
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            document.body.classList.remove('no-scroll');
+        }, 2200);
+    }
+    
+    // Custom cursor inertia tracking
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+    
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
+    let isTouchDevice = false;
+    
+    // Check if the device is a touchscreen
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        isTouchDevice = true;
+        if (cursorDot) cursorDot.style.display = 'none';
+        if (cursorRing) cursorRing.style.display = 'none';
+    }
+    
+    if (!isTouchDevice && cursorDot && cursorRing) {
+        document.body.classList.add('custom-cursor-active');
+        
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Dot follows mouse directly
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+        });
+        
+        // Ring follows mouse with linear interpolation (lag)
+        function updateCursorRing() {
+            ringX += (mouseX - ringX) * 0.15;
+            ringY += (mouseY - ringY) * 0.15;
+            
+            cursorRing.style.left = `${ringX}px`;
+            cursorRing.style.top = `${ringY}px`;
+            
+            requestAnimationFrame(updateCursorRing);
+        }
+        updateCursorRing();
+        
+        // Add expand transitions on hovers
+        const interactiveSelectors = 'a, button, select, input, textarea, .btn-console, .map-hotspot, .neighborhood-list li';
+        
+        document.body.addEventListener('mouseover', (e) => {
+            if (e.target.closest(interactiveSelectors)) {
+                cursorRing.classList.add('hovering');
+            }
+        });
+        
+        document.body.addEventListener('mouseout', (e) => {
+            if (!e.relatedTarget || !e.relatedTarget.closest(interactiveSelectors)) {
+                cursorRing.classList.remove('hovering');
+            }
+        });
+    }
+
+    /* ==========================================================================
        1. CORE STATE & THE FLOORPLAN SELECTOR DATA
        ========================================================================== */
        
@@ -602,6 +670,65 @@ document.addEventListener('DOMContentLoaded', () => {
         inquirySection.scrollIntoView({ behavior: 'smooth' });
     });
 
+    // Add event listeners to property card layout configuration buttons
+    const cardCtaButtons = document.querySelectorAll('.card-cta-btn');
+    cardCtaButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetUnit = button.getAttribute('data-target-unit');
+            const targetFloor = button.getAttribute('data-target-floor');
+            
+            // 1. Programmatically select Unit
+            const unitBtn = document.querySelector(`#unit-selector .btn-console[data-unit="${targetUnit}"]`);
+            if (unitBtn) {
+                unitSelectorButtons.forEach(btn => btn.classList.remove('active'));
+                unitBtn.classList.add('active');
+                activeUnit = targetUnit;
+            }
+            
+            // 2. Programmatically select Floor
+            const floorBtn = document.querySelector(`#floor-selector .btn-console[data-floor="${targetFloor}"]`);
+            if (floorBtn) {
+                floorSelectorButtons.forEach(btn => btn.classList.remove('active'));
+                floorBtn.classList.add('active');
+                activeFloor = targetFloor;
+            }
+            
+            // 3. Update the console display (blueprints, views, specs)
+            updateConsole();
+            
+            // 4. Update Inquiry Select Option Matching unit & floor details
+            const compositeKey = `${activeUnit}-${activeFloor}`;
+            const data = consoleDatabase[compositeKey];
+            if (data) {
+                const targetOptionValue = `suite-${data.suite}`;
+                for (let i = 0; i < vipSuiteSelect.options.length; i++) {
+                    if (vipSuiteSelect.options[i].value === targetOptionValue) {
+                        vipSuiteSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+                vipSuiteSelect.dispatchEvent(new Event('change'));
+                
+                // Update selected badge text
+                const unitNameFormatted = activeUnit.charAt(0).toUpperCase() + activeUnit.slice(1);
+                const floorNameFormatted = activeFloor === 'lower' ? 'Lower Ground' : activeFloor === 'mid' ? 'Mid-rise' : 'Upper Levels';
+                badgeSuiteDetails.textContent = `Suite ${data.suite} (${unitNameFormatted} - ${floorNameFormatted})`;
+                
+                // Animate selected badge reveal
+                selectedSuiteBadge.style.opacity = '0.5';
+                setTimeout(() => {
+                    selectedSuiteBadge.style.opacity = '1';
+                }, 150);
+            }
+            
+            // 5. Smooth scroll down to the Floorplan Console (#selector)
+            const selectorSection = document.getElementById('selector');
+            if (selectorSection) {
+                selectorSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
     // Synchronize selector changes directly into inquiry select badge on change
     vipSuiteSelect.addEventListener('change', () => {
         const selectedValue = vipSuiteSelect.value;
@@ -874,15 +1001,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
-       5. INTERSECTION OBSERVER FOR PREMIUM SCROLL REVEALS
+       5. INTERSECTION OBSERVERS FOR PREMIUM SCROLL REVEALS
        ========================================================================== */
-
+ 
     const scrollObserverOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.12
     };
-
+ 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -892,9 +1019,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, scrollObserverOptions);
-
+ 
     const elementsToReveal = document.querySelectorAll('.reveal-on-scroll');
     elementsToReveal.forEach(el => scrollObserver.observe(el));
+
+    // Image Swipe-Reveal Intersection Observer
+    const imageRevealOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const imageRevealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, imageRevealOptions);
+
+    const imagesToReveal = document.querySelectorAll('.image-reveal-wrapper');
+    imagesToReveal.forEach(img => imageRevealObserver.observe(img));
 
 
     /* ==========================================================================
