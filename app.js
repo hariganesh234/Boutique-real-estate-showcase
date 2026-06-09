@@ -1310,4 +1310,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Reset button inside success card to submit another inquiry
+    const successResetBtn = document.getElementById('success-reset-btn');
+    if (successResetBtn) {
+        successResetBtn.addEventListener('click', () => {
+            // 1. Reset inputs
+            vipForm.reset();
+            
+            // 2. Hide success card and restore form
+            vipSuccessCard.classList.remove('active');
+            vipForm.style.display = 'block';
+            
+            // Allow form elements layout flow to stabilize before resetting hidden state
+            setTimeout(() => {
+                vipForm.classList.remove('hidden');
+            }, 50);
+            
+            // 3. Show focus badge and sync select text
+            selectedSuiteBadge.style.display = 'block';
+            selectedSuiteBadge.style.opacity = '1';
+            vipSuiteSelect.dispatchEvent(new Event('change'));
+            
+            // 4. Smooth scroll back to form focus
+            document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
 });
